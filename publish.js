@@ -71,5 +71,47 @@ filelist.forEach( f => {
   fs.copyFileSync( `./webpackbuild/build/${f}`, `./docs/webpack/${f}` );
 })
 
+console.log( '\nReplace asset paths so can be served on gh-pages\n' );
+const replacein = [
+  './docs/index.html',
+  './docs/gulp/builtindex.js',
+  './docs/gulp/builtone.js',
+  './docs/gulp/builttwo.js',
+  './docs/gulp/index.html',
+  './docs/gulp/one.html',
+  './docs/gulp/two.html',
+  './docs/webpack/builtindex.js',
+  './docs/webpack/builtone.js',
+  './docs/webpack/builttwo.js',
+  './docs/webpack/index.html',
+  './docs/webpack/one.html',
+  './docs/webpack/two.html'
+];
+
+const replacers = [
+  { s: /"\/favicon.png"/g , r: '"./favicon.png"' },
+  { s: /"\/gulp"/g , r: '"./gulp"' },
+  { s: /"\/webpack"/g , r: '"./webpack"' },
+  { s: /"\/webpack\/builtindex.js"/g , r: '"./webpack/builtindex.js"' },
+  { s: /"\/webpack\/builtone.js"/g , r: '"./webpack/builtone.js"' },
+  { s: /"\/webpack\/builttwo.js"/g , r: '"./webpack/builttwo.js"' },
+  { s: /"\/gulp\/builtindex.js"/g , r: '"./gulp/builtindex.js"' },
+  { s: /"\/gulp\/builtone.js"/g , r: '"./gulp/builtone.js"' },
+  { s: /"\/gulp\/builttwo.js"/g , r: '"./gulp/builttwo.js"' },
+  { s: /"\/gulp\/two.html"/g , r: '"./gulp/two.html"' },
+  { s: /"\/gulp\/one.html"/g , r: '"./gulp/one.html"' },
+  { s: /"\/gulp\/index.html"/g , r: '"./gulp/index.html"' },
+  { s: /"\/webpack\/two.html"/g , r: '"./webpack/two.html"' },
+  { s: /"\/webpack\/one.html"/g , r: '"./webpack/one.html"' },
+  { s: /"\/webpack\/index.html"/g , r: '"./webpack/index.html"' },
+];
+
+replacein.forEach( f => {
+  let a = fs.readFileSync( f, { encoding: 'utf8' } );
+  a = replacers.reduce(( prev, curr ) => {
+    return prev.replace( curr.s, curr.r );
+  }, a );
+  fs.writeFileSync( f, a, { encoding: 'utf8'} );
+});
 
 console.log( '\nDone\n')
