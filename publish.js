@@ -70,6 +70,8 @@ filelist.forEach( f => {
   fs.copyFileSync( `./gulpbuild/build/${f}`, `./docs/gulp/${f}` );
   fs.copyFileSync( `./webpackbuild/build/${f}`, `./docs/webpack/${f}` );
 })
+fs.copyFileSync( './home/favicon.png', './docs/gulp/favicon.png' );
+fs.copyFileSync( './home/favicon.png', './docs/webpack/favicon.png' );
 
 console.log( '\nReplace asset paths so can be served on gh-pages\n' );
 const replacein = [
@@ -98,12 +100,12 @@ const replacers = [
   { s: /"\/gulp\/builtindex.js"/g , r: '"./builtindex.js"' },
   { s: /"\/gulp\/builtone.js"/g , r: '"./builtone.js"' },
   { s: /"\/gulp\/builttwo.js"/g , r: '"./builttwo.js"' },
-  { s: /"\/gulp\/two.html"/g , r: '"./gulp/two.html"' },
-  { s: /"\/gulp\/one.html"/g , r: '"./gulp/one.html"' },
-  { s: /"\/gulp\/index.html"/g , r: '"./gulp/index.html"' },
-  { s: /"\/webpack\/two.html"/g , r: '"./webpack/two.html"' },
-  { s: /"\/webpack\/one.html"/g , r: '"./webpack/one.html"' },
-  { s: /"\/webpack\/index.html"/g , r: '"./webpack/index.html"' },
+  { s: /"\/gulp\/two.html"/g , r: '"./two.html"' },
+  { s: /"\/gulp\/one.html"/g , r: '"./one.html"' },
+  { s: /"\/gulp\/index.html"/g , r: '"./index.html"' },
+  { s: /"\/webpack\/two.html"/g , r: '"./two.html"' },
+  { s: /"\/webpack\/one.html"/g , r: '"./one.html"' },
+  { s: /"\/webpack\/index.html"/g , r: '"./index.html"' },
 ];
 
 replacein.forEach( f => {
