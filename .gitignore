@@ -1,0 +1,12 @@
+node_modules
+.DS_Store
+package-lock.json
+
+
+gulpbuild/build/*.html
+gulpbuild/build/*.js
+
+
+webpackbuild/build/*.html
+webpackbuild/build/*.js
+webpackbuild/build/*.map
