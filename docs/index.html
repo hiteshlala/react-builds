@@ -1,0 +1,129 @@
+<!--
+ Created on Sat Aug 22 2020
+ Copyright (c) 2020 Hitesh Lala
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <title>React Build Methods</title>
+    <style> 
+      :root { 
+        --max-width: 1280px 
+      }
+      * { 
+        box-sizing: border-box; 
+      }
+      body { 
+        padding: 0; 
+        margin: 0;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        color:#0000cd;
+      }
+      a {
+        color: #0000cd;
+        text-decoration: none;
+      }
+      a:hover {
+        color: brown;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .spacer {
+        flex-grow: 1
+      }
+      .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: var(--max-width);
+        height: 50px;
+        line-height: 50px;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .wrapper {
+        background-color:#f0f8ff;
+        width: 100vw;
+        border-bottom: 1px solid blue;
+      }
+      .logo {
+        padding: 7px 0px;
+      }
+      .title {
+        line-height: 50px;
+        font-size: 30px;
+        padding-left: 15px;
+      }
+      .nav {
+        line-height: 50px;
+        font-size: 22px;
+      }
+
+      
+      .body-content {
+        height: 100%;
+      }
+      .main-content {
+        padding-top: 2px;
+        font-size: 18px;
+        max-width: var(--max-width);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+      }
+
+      .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: #f0f8ff;
+        justify-content: center;
+        height: 50px;
+        line-height: 50px;
+        background-color: #f0f8ff;
+        width: 100vw;
+        border-top: 1px solid blue;
+        font-size: 22px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main">
+        <div class="logo"><img src="/favicon.png" width=36 height=36 ></img></div>
+        <div class="title">React Build Methods</div>
+        <div class="spacer"></div>
+        <div class="nav"><a href="https://hiteshlala.com">Home</a></div>
+      </div>
+    </div>
+
+    <div class="body-content">
+      <div class="main-content">
+        <h1>Build Methods</h1>
+        <li><a href="/gulp">Gulp Build</a></li>
+        <li><a href="/webpack">Webpack Build</a></li>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="https://hiteshlala.com"> &copy; Hitesh Lala <span id="year"></span> </a> 
+    </div>
+
+    <script>
+      const year = new Date().getFullYear()
+      const copyyear = year === 2020 ? '2020' : `2020 - ${year}`;
+      document.getElementById( 'year' ).innerText = copyyear;
+    </script>
+
+  </body>
+</html>

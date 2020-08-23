@@ -1,0 +1,26 @@
+{
+  "name": "webpackbuild",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Hitesh Lala <hiteshlala@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-jss": "^10.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

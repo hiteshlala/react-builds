@@ -1,0 +1,26 @@
+{
+  "name": "gulpbuild",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "gulp"
+  },
+  "keywords": [],
+  "author": "Hitesh Lala <hiteshlala@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "browserify": "^16.5.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-print": "^5.0.2",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-jss": "^10.4.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "react-builds",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "buildwebpack": "cd webpackbuild && npm install && npm run build && cd ..",
+    "buildgulp": "cd gulpbuild && npm install && npm run build && cd ..",
+    "prepub": "npm run buildgulp && npm run buildwebpack",
+    "pub": "node publish.js"
+  },
+  "keywords": [],
+  "author": "Hitesh Lala <hiteshlala@gmail.com>",
+  "license": "ISC"
+}
