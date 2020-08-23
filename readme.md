@@ -25,7 +25,7 @@ Depends on Babel and Browserify to generate the assets.
 Depends on Babel to generate the assets.
 
 
-[See what built pages should look like here.]([https://hiteshlala.com/react-builds)
+[See what built pages should look like here: https://hiteshlala.com/react-builds]([https://hiteshlala.com/react-builds)
 
 
 
