@@ -9,7 +9,8 @@
     "buildwebpack": "cd webpackbuild && npm install && npm run build && cd ..",
     "buildgulp": "cd gulpbuild && npm install && npm run build && cd ..",
     "prepub": "npm run buildgulp && npm run buildwebpack",
-    "pub": "node publish.js"
+    "pub": "node publish.js",
+    "justbuild": "cd webpackbuild && npm run build && cd .. && cd gulpbuild && npm run build && cd .."
   },
   "keywords": [],
   "author": "Hitesh Lala <hiteshlala@gmail.com>",

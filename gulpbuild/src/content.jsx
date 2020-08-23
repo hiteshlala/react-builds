@@ -48,7 +48,7 @@ export default function Content() {
 
           <p>The build can use some cleanup.</p>
 
-          <p><a href="https://github.com/hiteshlala/react-builds/gulpbuild">Get Code</a></p>
+          <p><a href="https://github.com/hiteshlala/react-builds/tree/master/gulpbuild">Get Code</a></p>
 
           <h1>Contents</h1>
           <li><a href="/gulp/one.html">Page One</a></li>

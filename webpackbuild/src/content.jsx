@@ -47,7 +47,7 @@ export default function Content() {
 
           <p>The build can use some optimizing and cleanup.</p>
 
-          <p><a href="https://github.com/hiteshlala/react-builds/webpackbuild">Get Code</a></p>
+          <p><a href="https://github.com/hiteshlala/react-builds/tree/master/webpackbuild">Get Code</a></p>
 
           <h1>Contents</h1>
           <li><a href="/webpack/one.html">Page One</a></li>

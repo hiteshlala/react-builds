@@ -36,7 +36,8 @@ const useStyles = createUseStyles({
   },
   nav: {
     lineHeight: '50px',
-    fontSize: '22px',
+    fontSize: '20px',
+    paddingRight: '5px'
   }
 });
 
@@ -50,6 +51,7 @@ export default function Header() {
         <div className={logo}><img src="/favicon.png" width={36} height={36} ></img></div>
         <div className={title}>React Build Gulp</div>
         <div className={spacer}></div>
+        <div className={nav}><a href="/react-builds/index.html">Builds</a></div>
         <div className={nav}><a href="/">Home</a></div>
       </div>
     </div>
